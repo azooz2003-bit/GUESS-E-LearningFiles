@@ -8,14 +8,27 @@
 	<array>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>//PASS BY REFERENCE
+			<string>"""
+As you continue reading, please note the differences between a Class and a Struct. It's important that you are able to distinguish between them in the long run.
+"""
+
+
+"""
+Class: PASS BY REFERENCE, as you pass a class object around, the reference to it's initial instantiation remains. Examples below provide more details.
+"""
 class UserAsClass {
     var username: String
     
+    /*
+     Simply a constructor that instantiates this class with the username set to "Aziz".
+     */
     init() {
         self.username = "Aziz"
     }
     
+    /*
+     Simply a method that changes username to the value passed by name.
+     */
     func changeName(name: String) {
         self.username = name
     }
@@ -23,37 +36,51 @@ class UserAsClass {
 
 
 
-// PASS BY VALUE
+"""
+Struct: PASS BY VALUE, as you pass a struct object around, you are only passing the value of it. Examples below provide more details.
+"""
 struct UserAsStruct {
     
     var username: String
     
+    /*
+    Since init() is a default constructor used to initialize the struct object, we don't need to label it with the mutating keyword.
+     */
     init() {
         self.username = "Aziz"
     }
     
+    
+    /*
+    Structs are immutable, so if a function defined within a struct alters some local variable (like username), that function will have to be labeled with the mutating keyword. See below.
+     */
     mutating func changeName(name: String) {
         self.username = name
     }
 }
 
 
-
-// Initialized a struct object and class object respectively:
-
-var userAsStruct = UserAsStruct()
+"""
+Initialized a class object and struct object respectively, let's see how differently they act.
+"""
 var userAsClass = UserAsClass()
+var userAsStruct = UserAsStruct()
 
-// The difference between the two
 
-// Struct
+"""
+Here, we make a copy of the previous struct instance (userAsStruct) by passing it to a new variable, uncomment the print statements below to see how the PASS BY VALUE property works. Despite changing the username value in copyOfUserAsStruct, that change isn't redirected towards userAsStruct.
+"""
 var copyOfUserAsStruct = userAsStruct
 copyOfUserAsStruct.username = "abc"
+
 
 print("userAsStruct's username = \(userAsStruct.username)")
 print("copyOfUserAsStruct's username = \(copyOfUserAsStruct.username)")
 
-// Class
+
+"""
+Here, we make a copy of the previous class instance (userAsClass) by passing it to a new variable, uncomment the print statements below to see how the PASS BY REFERENCE property works. After changing the username value in copyOfUserAsClass, that change is also redirected towards userAsClass.
+"""
 var copyOfUserAsClass = userAsClass
 copyOfUserAsClass.username = "abc"
 
@@ -62,7 +89,7 @@ print("copyOfUserAsClass's username = \(copyOfUserAsClass.username)")
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{1, 1008}</string>
+			<string>{1, 2579}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
