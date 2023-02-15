@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// BASIC DATA TYPES
+
+var someString: String = "car"
+// Operations placeholder
+print("someString = \(someString)")
+
+var someBool: Bool = true
+// Operations placeholder
+print("someBool = \(someBool)")
+
+var someInt: Int = 13
+// Operations placeholder
+//print("someInt = \(someInt)")
+
+var someDouble: Double = 13.5
+// Operations placeholder
+//print("someDouble = \(someDouble)")
+
+var someArrayOfStrings: [String] = ["Aziz", "Max", "a string"]
+// Operations placeholder
+//print("someArrayOfStrings = \(someArrayOfStrings)")
+
+var someDictionary: [String : Int] = ["Aziz" : 200, "Max" : 200]
+// Operations placeholder
+//print("someDictionary = \(someDictionary)")
+
+let MY_AGE_CONSTANT: Int = 19
+// Operations placeholder
+//print("MY_AGE_CONSTANT is \(MY_AGE_CONSTANT)")
+
+var NIL = nil // Illegal to assign without an explicit type
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 827}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

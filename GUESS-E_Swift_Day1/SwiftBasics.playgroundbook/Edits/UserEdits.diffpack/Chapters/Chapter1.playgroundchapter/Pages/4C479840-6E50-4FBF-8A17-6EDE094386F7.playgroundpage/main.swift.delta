@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//PASS BY REFERENCE
+class UserAsClass {
+    var username: String
+    
+    init() {
+        self.username = "Aziz"
+    }
+    
+    func changeName(name: String) {
+        self.username = name
+    }
+}
+
+
+
+// PASS BY VALUE
+struct UserAsStruct {
+    
+    var username: String
+    
+    init() {
+        self.username = "Aziz"
+    }
+    
+    mutating func changeName(name: String) {
+        self.username = name
+    }
+}
+
+
+
+// Initialized a struct object and class object respectively:
+
+var userAsStruct = UserAsStruct()
+var userAsClass = UserAsClass()
+
+// The difference between the two
+
+// Struct
+var copyOfUserAsStruct = userAsStruct
+copyOfUserAsStruct.username = "abc"
+
+print("userAsStruct's username = \(userAsStruct.username)")
+print("copyOfUserAsStruct's username = \(copyOfUserAsStruct.username)")
+
+// Class
+var copyOfUserAsClass = userAsClass
+copyOfUserAsClass.username = "abc"
+
+print("userAsClass's username = \(userAsClass.username)")
+print("copyOfUserAsClass's username = \(copyOfUserAsClass.username)")
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1008}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
