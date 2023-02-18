@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    //               We can give cases inputs as well!
+    case initializing, playing(String), lost
+</string>
+			<key>ModifiedRange</key>
+			<string>{19, 100}</string>
+			<key>OriginalContent</key>
+			<string>    case initializing(Int), playing(String), lost
+</string>
+			<key>OriginalRange</key>
+			<string>{19, 50}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    // You can thing of this variable as a way of assigning these cases 'properties'. All very useful when we want to manage a lot of constants.
+</string>
+			<key>ModifiedRange</key>
+			<string>{124, 145}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{74, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>            return "Playing is in progress, please wait." + someString
+        case .initializing:
+</string>
+			<key>ModifiedRange</key>
+			<string>{434, 99}</string>
+			<key>OriginalContent</key>
+			<string>            return "Playing is in progress, please wait."
+        case .initializing(let someInt):
+</string>
+			<key>OriginalRange</key>
+			<string>{239, 99}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// We can call on these specific cases and their properties in the following manner:
+var myGameState: String = GameState.playing(" Hi.").asString
+var someGameState: String = GameState.initializing.asString
+</string>
+			<key>ModifiedRange</key>
+			<string>{623, 206}</string>
+			<key>OriginalContent</key>
+			<string>var myGameState: GameState = .playing("Sasdasd")
+</string>
+			<key>OriginalRange</key>
+			<string>{428, 49}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Playing game state:
+</string>
+			<key>ModifiedRange</key>
+			<string>{830, 23}</string>
+			<key>OriginalContent</key>
+			<string>enum Optional&lt;Wrapped&gt; { 
+    case some(Wrapped)
+    case nil
+}
+// init logic
+</string>
+			<key>OriginalRange</key>
+			<string>{478, 78}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/EBA592B5-B234-4DEB-B425-D7E088BF0C3B.playgroundpage/main.swift</string>
+</dict>
+</plist>
